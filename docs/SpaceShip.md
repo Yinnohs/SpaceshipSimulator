@@ -23,3 +23,9 @@ Also it has a graphical representation of a space ship
 This class would let me create and configure a lot of types of classes.
 <br>
 It's the base class for the spaceships...
+
+<br>
+visit the cargo class for more information
+<br>
+
+[click me](./cargo.md)
