@@ -27,4 +27,13 @@ public class Cargo extends SpaceShip {
             System.out.println("One container has been unload, total containers: " + this.currentContainers);
         }
     }
+
+    @Override
+    public String toString(){
+        return "__\n" +
+                "|  " + "\\n"+
+                "=[_|H)--._____\n"+
+                "=[+--,-------'\n" +
+                "[|_/\"\"";
+    }
 }
