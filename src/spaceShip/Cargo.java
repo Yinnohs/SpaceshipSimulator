@@ -1,7 +1,7 @@
 package spaceShip;
 
 public class Cargo extends SpaceShip {
-    private int maxLoad;
+    private final int MAXLOAD = 50;
     private final int CONTAINER = 1;
 
     private int currentContainers;
@@ -10,12 +10,12 @@ public class Cargo extends SpaceShip {
     }
 
     public void load() {
-        if ((this.currentContainers + CONTAINER) > this.maxLoad ){
+        if ((this.currentContainers + CONTAINER) > this.MAXLOAD){
             System.out.println("ERROR ERROR, cannot fit more containers into the cargo!");
         }else {
             this.currentContainers += CONTAINER;
             System.out.println("Added a containers to the cargo");
-            System.out.println("space left: " + (this.maxLoad - this.currentContainers) + " / " + this.maxLoad);
+            System.out.println("space left: " + (this.MAXLOAD - this.currentContainers) + " / " + this.MAXLOAD);
         }
     }
 

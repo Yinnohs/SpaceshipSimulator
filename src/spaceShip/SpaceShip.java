@@ -14,7 +14,7 @@ public class SpaceShip {
     public SpaceShip(String name, String galacticLicensePlate){
         this.name = name;
         this.galacticLicensePlate = galacticLicensePlate;
-        this.aceleration = 9.8;
+        this.aceleration = 1.0;
         this.speedY = 0;
         this.speedX = 0;
         this.coordinateX = 1;
@@ -23,25 +23,28 @@ public class SpaceShip {
         this.directionY = 0;
     }
 
-    public int speedUpX(double acceleration){
+    public String speedUp(double acceleration){
         this.speedX += acceleration;
-        this.coordinateX += this.speedX;
-        return ((int) Math.floor(this.coordinateX));
-    }
-
-    public  double speedUpY(double acceleration){
         this.speedY += acceleration;
+
+        this.coordinateX += this.speedX;
         this.coordinateY += this.speedY;
-        return ((int) Math.floor(this.coordinateY));
+
+        return  "[" + (double) Math.round(this.coordinateX * 100) / 100 +" , " + (double) Math.round(this.coordinateY * 100) / 100 + "]";
     }
 
     public void brake(){
         this.aceleration -= this.aceleration;
     }
 
-    public void EmergencyStop(){
+    public void emergencyStop(){
         this.speedX = 0;
         this.speedY = 0;
+        this.aceleration = 0;
+    }
+
+    public double getAceleration() {
+        return this.aceleration;
     }
 
     @Override
